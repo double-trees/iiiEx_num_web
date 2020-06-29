@@ -1,79 +1,24 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
+<html lang="en-us">
   <head>
-    <head prefix="og:url" content=>
-    <meta property="og:title" content="NUM.(Ningen Unique Mirror)" /＞ <br />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="我々人間は、マイナンバーや学籍番号、社員番号、IPアドレスなど、突然与えられた数字の羅列によって個人を特定されている。しかし、数字の羅列は単調で無機質で、そこには人間らしい温かみは感じられない。数字は人間(Ningen)の独特(Unique)なものであるのに、それを人間を映す鏡(Mirror)として使うと途端に人間らしさがなくなってしまうのだ。数字の新しい示し方を通して、他人とそして自分自身の新しい見方を獲得できるだろう。" />
-    <meta property="og:image" content="">
-    <meta property="og:site_name" content="NUM.(Ningen Unique Mirror) - 東京大学制作展extra" />
-    <meta property="og:locale" content="ja_JP" />
-    <meta property="og:url" content="https://extra2020.iiiexhibition.com/works/NUM.html" />
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="">
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./workspage.css">
-    <link rel="stylesheet" type="text/css" href="./workspage_sp.css">
-    <title>NUM. (Ningen Unique Mirror)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | NUM</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
     <script>
-        (function(d) {
-          var config = {
-            kitId: 'pez4ecw',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-        })(document);
-      </script>
-      <script
-        src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-        crossorigin="anonymous">
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/js/modaal.min.js"></script>
-      <script src="./modal.js"></script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/webGL.json", {onProgress: UnityProgress});
+    </script>
   </head>
   <body>
-    <div id="container">
-      <div id="works__container">
-        <iframe width="960px" height="640px"
-         src="https://object-storage.tyo2.conoha.io/v1/nc_7d0030b822e246239683a325ebfb1974/iiiex/works/NUM/game.html"
-         frameborder="0" allowfullscreen>
-       </iframe>
-     </div>
-
-      </div>
-      <div id="title__container">
-        <p class="title_jp">NUM.<br>(Ningen Unique Mirror)</p>
-        <p class="title_en">NUM.<br>(Ningen Unique Mirror)</p>
-        <hr class="sp_only">
-      </div>
- 
-      <div id="author__container">
-        <div class="author__div">
-          <div class="author__column">
-            <ul class="author__name">
-              <li>Hirotaka Hayashi</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="caption_text">
-        <p class="caption_jp">我々人間は、マイナンバーや学籍番号、社員番号、IPアドレスなど、突然与えられた数字の羅列によって個人を特定されている。しかし、数字の羅列は単調で無機質で、そこには人間らしい温かみは感じられない。数字は人間(Ningen)の独特(Unique)なものであるのに、それを人間を映す鏡(Mirror)として使うと途端に人間らしさがなくなってしまうのだ。数字の新しい示し方を通して、他人とそして自分自身の新しい見方を獲得できるだろう。</p>
-        <p class="caption_en">We, human beings, are often identified by suddenly given numbers, such as My Numbers, student IDs, employee numbers, and IP addresses. However, the enumerated numbers are monotonous and inorganic, and there is no human warmth. Numbers are unique to humans (Ningen). But once they are used as mirrors to reflect humans, they are not humane. Through looking at numbers in different ways, you will also find new ways of seeing yourself and others.</p>
-      </div> 
-      <hr class="pc_only">
-      <div id="buttons__container">
-        <button type="button" class="button_speak"><img src="./img/button_speak@2x.png" alt=""></button>
-        <button type="button" class="button_good"><img src="./img/button_good1@2x.png" alt=""></button>
-        <button type="button" class="button_twitter"><img src="./img/button_twitter@2x.png" alt=""></button>
-        <button type="button" class="button_back"><img src="./img/button_back@2x.png" alt=""></button>
-      </div>
-      <div id="footer__container">
-        <p>@iiiEx2020</p>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 1200px; height: 675px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">NUM</div>
       </div>
     </div>
   </body>
